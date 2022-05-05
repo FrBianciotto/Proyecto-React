@@ -1,0 +1,21 @@
+.cart{
+    display: flex;
+    position: relative;
+}
+
+.cart i{
+    font-size: 40px;
+}
+
+.cart-count{
+    color: white;
+    background-color: blue;
+    padding: 0px 5px 0px 5px;
+    border-radius: 50%;
+    position: absolute;
+    line-height: 23px;
+    right: 0;
+    top: 7;
+    font-size: 15px;
+    font-weight: bold;
+}
