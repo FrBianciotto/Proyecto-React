@@ -1,0 +1,25 @@
+.itemCount{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.itemCount button{
+    width: 12rem;
+    margin-top: 5px;
+}
+.itemCount-cant{
+    width: 12rem;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemCount-cant span{
+    width: 50rem;
+}
+.itemCount-cant button{
+    margin: 2px;
+}
