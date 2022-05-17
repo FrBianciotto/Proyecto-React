@@ -4,32 +4,22 @@
     align-items: center;
     padding: 20px;
     background-color: beige;
-    height: 100px;
+    
 }
 .containerLogo{
     display: flex;
     align-items: center;
 }
-.containerLogo h1{
-    padding: 0 5px;
+
+.app-header a {
+    text-decoration: none;
 }
 .logo{
     height: 100px;
     width: auto;
     padding: 5px;
 }
-.navbar{
-    display: flex;
-}
-.navbar ul{
-    display: flex;
-    align-items: center;
-}
-.navbar li{
-    margin: 0 10px;
-    list-style: none;
-}
-.navbar li a{
+.navbarLinks{
     text-decoration: none;
     color: black;
     font-size: 25px;
