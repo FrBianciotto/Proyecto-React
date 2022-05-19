@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount/Itemcount"
 import { Link } from "react-router-dom"
 import './Item.css' 
 
-const Item = ({ id, categoria, nombre, precio, img }) => {
+const Item = ({ id, nombre, precio, img }) => {
     return (
         <div className="item col-md-4">
             <Card style={{ width: '18rem', padding:'10px' }}>
