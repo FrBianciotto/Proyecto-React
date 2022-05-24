@@ -1,5 +1,4 @@
 import { Card, Button } from "react-bootstrap"
-import ItemCount from "../ItemCount/Itemcount"
 import { Link } from "react-router-dom"
 import './Item.css' 
 
@@ -17,7 +16,6 @@ const Item = ({ id, nombre, precio, img }) => {
                         <Button variant="primary">Ver mas detalles</Button>
                     </Link>
                 </Card.Body>
-                <ItemCount stock={5} initial={1} onAdd={(cantidad)=>{ console.log(`Añadiste ${cantidad} productos al carrito`)}}/>
             </Card>
 
         </div>

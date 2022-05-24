@@ -1,25 +1,26 @@
 import { useState } from "react"
 import './ItemCount.css'
-const ItemCount = ({ stock, initial, onAdd }) => {
-    const [cant, setCant] = useState(initial)
+const ItemCount = ({ stock, initial, onAdd, handleInputType }) => {
+    const [quantity, setQuantity] = useState(initial)
     function increment() {
-        if (cant < stock) {
-            setCant(cant + 1);
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
         }
     }
     function decrement() {
-        if (cant > 1) {
-            setCant(cant - 1);
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
         }
     }
     function addToCart(){
-        onAdd(cant)
+        onAdd(quantity);
+        handleInputType();
     }
     return (
         <section className="itemCount">
             <div className="itemCount-cant">
                 <button type="button" className="btn btn-primary" onClick={increment}>+</button>
-                <span>{cant}</span>
+                <span>{quantity}</span>
                 <button type="button" className="btn btn-primary" onClick={decrement}>-</button>
             </div>
             <button type="button" className="btn btn-primary" onClick={addToCart}>AÑADIR AL CARRITO</button>
