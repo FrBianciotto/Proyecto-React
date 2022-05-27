@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import { Card, CardGroup } from 'react-bootstrap'
 import swal from 'sweetalert'
+import { useCartContext } from '../../context/CartContext'
 import ItemCount from '../ItemCount/Itemcount'
 import OptionButton from '../OptionButton/OptionButton'
 import './itemDetail.css'
 
 const ItemDetail = ({ prod }) => {
   const [inputType, setImputType] = useState('itemCount')
+  const {addToCart, cartList} = useCartContext()
   let { imagen, nombre, descripcion, stock, precio } = prod
 
   const onAdd = (quantity) => {
     swal("¡Producto Cargado!", `Añadiste ${quantity} ${nombre} al carrito`, "success")
+    addToCart({...prod, cantidad: quantity})
   }
+  console.log(cartList)
   function handleInputType() {
     setImputType('buyButtons')
   }

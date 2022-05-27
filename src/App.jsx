@@ -1,17 +1,19 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './context/CartContext';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css' 
 import NavBar from './components/navbar/Navbar';
 import ItemListContainer from './Container/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer';
-import Cart from './components/Cart/Cart';
 
 
 function App() {
   return (
     <BrowserRouter> 
+     <CartContextProvider>
       <div className="App">
           <NavBar/>
           <Routes>
@@ -22,7 +24,8 @@ function App() {
 
             <Route path='/*' element={<Navigate to='/'/>}/>
           </Routes>
-      </div>    
+      </div> 
+      </CartContextProvider>   
     </BrowserRouter>
   );
 }
