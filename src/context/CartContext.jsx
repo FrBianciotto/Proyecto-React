@@ -12,6 +12,7 @@ const CartContextProvider = ({children}) =>{
         if (isInCart(item.id)) {
             const index= cartList.findIndex((product)=>product.id===item.id)
             cartList[index].cantidad+= item.cantidad
+            setCartList([...cartList])
         }else{
             setCartList( [
                 ...cartList,
@@ -22,8 +23,8 @@ const CartContextProvider = ({children}) =>{
 
     const deleteItem =(id)=> {
         const newCart = [...cartList];
-        let index = newCart.findIndex((product) => product.id === id);
-        newCart.splice(index, 1);
+        let i = newCart.findIndex((product) => product.id === id);
+        newCart.splice(i, 1);
         setCartList([...newCart]);
     }
 

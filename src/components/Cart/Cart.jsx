@@ -11,11 +11,12 @@ const Cart = () => {
       {cartList.length ? (
         <div>
           {cartList.map((product) =>(
-            
-            <li>
-              {`Producto: ${product.nombre} -Precio: ${product.precio} - Cantidad: ${product.cantidad} `}
-              <button className="delete-button" onClick={(product) => deleteItem(product.id)}>Eliminar Producto</button>
-            </li>
+            <div key={product.id}>
+              <li>
+                {`Producto: ${product.nombre} -Precio: ${product.precio} - Cantidad: ${product.cantidad} `}
+                <button className="delete-button" onClick={() => deleteItem(product.id)}>Eliminar Producto</button>
+              </li>
+            </div>
           ))}
           <button onClick={clearCart}>Vaciar carrito</button>
         </div>

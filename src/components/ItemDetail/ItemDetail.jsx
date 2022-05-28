@@ -8,14 +8,13 @@ import './itemDetail.css'
 
 const ItemDetail = ({ prod }) => {
   const [inputType, setImputType] = useState('itemCount')
-  const {addToCart, cartList} = useCartContext()
+  const {addToCart} = useCartContext()
   let { imagen, nombre, descripcion, stock, precio } = prod
 
   const onAdd = (quantity) => {
     swal("¡Producto Cargado!", `Añadiste ${quantity} ${nombre} al carrito`, "success")
     addToCart({...prod, cantidad: quantity})
   }
-  console.log(cartList)
   function handleInputType() {
     setImputType('buyButtons')
   }
