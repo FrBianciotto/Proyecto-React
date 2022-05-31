@@ -4,7 +4,12 @@
 }
 
 .cart i{
+    font-size: 38px;
+    color: black;
+}
+.cart i:hover{
     font-size: 40px;
+    color: #0d6efd;
 }
 
 .cart-count{

@@ -27,9 +27,17 @@ const CartContextProvider = ({children}) =>{
         newCart.splice(i, 1);
         setCartList([...newCart]);
     }
-
+    
     const clearCart = () => {
         setCartList([])
+    }
+
+    const totalQuantity=()=>{
+        return cartList.reduce((count, product)=> (count += product.cantidad) ,0)
+    }
+
+    const totalPrice=()=>{
+        return cartList.reduce((count, product)=> count+=product.cantidad * product.precio ,0)
     }
 
     return (
@@ -37,7 +45,9 @@ const CartContextProvider = ({children}) =>{
             cartList,
             addToCart,
             deleteItem,
-            clearCart
+            clearCart,
+            totalQuantity,
+            totalPrice
         } } >
             {children}
         </CartContext.Provider>
