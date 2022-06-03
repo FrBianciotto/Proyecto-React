@@ -9,10 +9,10 @@ import './itemDetail.css'
 const ItemDetail = ({ prod }) => {
   const [inputType, setImputType] = useState('itemCount')
   const {addToCart} = useCartContext()
-  let { imagen, nombre, descripcion, stock, precio } = prod
+  let { image, name, description, stock, price } = prod
 
   const onAdd = (quantity) => {
-    swal("¡Producto Cargado!", `Añadiste ${quantity} ${nombre} al carrito`, "success")
+    swal("¡Producto Cargado!", `Añadiste ${quantity} ${name} al carrito`, "success")
     addToCart({...prod, cantidad: quantity})
   }
   function handleInputType() {
@@ -24,14 +24,14 @@ const ItemDetail = ({ prod }) => {
       <h2 className='mt-3'>Item Detail</h2>
       <CardGroup className='mt-5'>
         <Card className='d-flex align-items-center'>
-          <Card.Img className='img' src={imagen} />
+          <Card.Img className='img' src={image} />
         </Card>
         <Card>
           <Card.Body>
-            <Card.Title>{nombre}</Card.Title>
+            <Card.Title>{name}</Card.Title>
             <Card.Text>
-              {descripcion}
-              <p>Precio: ${precio}</p>
+              {description}
+              <p>Precio: ${price}</p>
             </Card.Text>
             {inputType === 'itemCount' ? (
               <ItemCount

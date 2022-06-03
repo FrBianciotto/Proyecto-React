@@ -13,7 +13,7 @@ const Cart = () => {
           {cartList.map((product) =>(
             <div key={product.id}>
               <li>
-                {`Producto: ${product.nombre} -Precio: ${product.precio} - Cantidad: ${product.cantidad} `}
+                {`Producto: ${product.name} -Precio: ${product.price} - Cantidad: ${product.cantidad} `}
                 <button className="delete-button btn btn" onClick={() => deleteItem(product.id)}>
                   <i class="bi bi-trash"></i>
                 </button>

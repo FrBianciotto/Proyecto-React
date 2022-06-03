@@ -41,7 +41,7 @@ const ItemListContainer = () => {
   return (
     <div>
         <h2 className='titulo'>Productos</h2>
-        {loading ? <Loader/> : <ItemList productos={products}/>} 
+        {loading ? <Loader/> : <ItemList products={products}/>} 
         
     </div>
   )
