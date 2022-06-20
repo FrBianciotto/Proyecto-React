@@ -1,4 +1,12 @@
+.card-detail{
+    width: 70vw;
+    margin: auto;
+}
+
+.card{
+    background-color: #faefe1 !important;
+}
 .img{
-    width: 300px;
+    width: 250px;
     height: auto;
 }

@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading]= useState(true)
     const {detailId}=useParams()
     
+ 
     useEffect(()=>{
         const db = getFirestore()
         const dbQuery=doc(db, 'items', detailId)

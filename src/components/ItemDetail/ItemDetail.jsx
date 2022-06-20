@@ -11,9 +11,10 @@ const ItemDetail = ({ prod }) => {
   const {addToCart} = useCartContext()
   let { image, name, description, stock, price } = prod
 
+  /* OnAdd is a function that takes a quantity as an argument and returns a sweet alert message with the quantity and name of the product added to the cart. */
   const onAdd = (quantity) => {
     swal("¡Producto Cargado!", `Añadiste ${quantity} ${name} al carrito`, "success")
-    addToCart({...prod, cantidad: quantity})
+    addToCart({...prod, quantity: quantity})
   }
   function handleInputType() {
     setImputType('buyButtons')
@@ -22,9 +23,9 @@ const ItemDetail = ({ prod }) => {
   return (
     <>
       <h2 className='mt-3'>Item Detail</h2>
-      <CardGroup className='mt-5'>
+      <CardGroup className='mt-5 card-detail'>
         <Card className='d-flex align-items-center'>
-          <Card.Img className='img' src={image} />
+          <img className='img' src={image} alt={name} />
         </Card>
         <Card>
           <Card.Body>

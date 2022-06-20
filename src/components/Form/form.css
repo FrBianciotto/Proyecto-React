@@ -1,0 +1,15 @@
+.formBuy{
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: auto;  
+  padding: 10px;
+}
+
+.formBuy input{
+    margin-bottom: 10px;
+}
+
+.formBuy span{
+    color: #ff1e1e79 ;
+}

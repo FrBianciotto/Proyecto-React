@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import{collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
 import ItemList from "../../components/ItemList/ItemList"
 import Loader from "../../components/Loader/Loader"
 
 import './ItemListContainer.css'
 
-import{collection, getDocs, getFirestore, query, where} from "firebase/firestore"
+
 
 const ItemListContainer = () => {
+  /* Setting the state of the component. */
   const [products, setProducts]= useState([])
   const [loading, setLoading]= useState(true)
+ /* Getting the id from the url. */
   const {id}= useParams()
   
+  /* Getting the data from firestore and setting it to the state. */
   useEffect(()=>{
     setLoading(true)
     const db= getFirestore()
@@ -26,7 +30,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-        <h2 className='titulo'>Productos</h2>
+        <h2 className='title'>Productos</h2>
         {loading ? <Loader/> : <ItemList products={products}/>} 
         
     </div>

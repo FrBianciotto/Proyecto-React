@@ -1,0 +1,10 @@
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.imgCart{
+    width: 200px;
+    height: auto;
+    margin: 10px auto;
+}
