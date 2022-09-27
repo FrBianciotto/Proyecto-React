@@ -10,6 +10,7 @@ import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailConta
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css' 
 import './App.css';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
             <Route path='/*' element={<Navigate to='/'/>}/>
           </Routes>
+          <Footer/>
       </div> 
       </CartContextProvider>   
     </BrowserRouter>
